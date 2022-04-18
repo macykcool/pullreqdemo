@@ -7,8 +7,12 @@ var carList = [
     "ACCORD",
     "CRV",
     "HRV",
-    "PILOT",
+    "PILOT"
 ];
+
+var stringCars = JSON.stringify(carList);
+localStorage.setItem("carList", stringCars);
+
 
 //DIPLAYS THE carList
 var displayCars = function() {
@@ -23,3 +27,5 @@ text += carList[i] + "<br>";
 
 document.getElementById("list"). innerHTML = text;
 };
+
+displayCars();
